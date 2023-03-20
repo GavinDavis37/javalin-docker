@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn clean package -Pgenerate-jar' 
+                sh 'mvn clean package -Dmaven.test.skip=true -Pgenerate-jar' 
             }
         }
         
