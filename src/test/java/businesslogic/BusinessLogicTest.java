@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import businesslogic.ExampleClass;
-class BusinessLogicTests {
+class BusinessLogicTest {
 
 	@Test
-	void test() {
+	void exampleTest() {
 		ExampleClass logic = new ExampleClass();
 		logic.addN(5);
 		assertEquals(5, logic.getCallCount());
