@@ -17,6 +17,7 @@ pipeline {
         
         stage('Docker Build') {
 	      steps {
+			sh 'echo "Current Working Directory" && pwd'
 	      	sh 'docker build --no-cache -t gd43/docker-javalin-test:latest .'
 	      }
 		}		
