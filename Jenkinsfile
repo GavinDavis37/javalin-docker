@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+	
+		stage('Build') { 
+            steps {
+                cleanWs()
+            }
+        }
+		
         stage('Build') { 
             steps {
                 sh 'mvn clean package -Dmaven.test.skip=true -Pgenerate-jar' 
