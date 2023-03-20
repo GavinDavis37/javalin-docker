@@ -2,18 +2,17 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Build') { 
-            steps {
-                sh 'mvn clean package -Dmaven.test.skip=true -Pgenerate-jar' 
-            }
-        }
-        
         stage('Test') {
 	      steps {
 			sh(script: 'mvn clean test -Ptest')
 	      }
 		}
+		
+		stage('Build') { 
+            steps {
+                sh 'mvn clean package -Dmaven.test.skip=true -Pgenerate-jar' 
+            }
+        }
         
         stage('Docker Build') {
 	      steps {
