@@ -17,7 +17,7 @@ pipeline {
         
         stage('Docker Build') {
 	      steps {
-	      	sh 'docker build -t gd43/docker-javalin-test:latest .'
+	      	sh 'docker build --no-cache -t gd43/docker-javalin-test:latest .'
 	      }
 		}		
 	
