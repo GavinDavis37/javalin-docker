@@ -2,15 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
-	      steps {
-			sh(script: 'mvn clean test -Ptest')
-	      }
-		}
-		
-		stage('Build') { 
+        stage('Build') { 
             steps {
-                sh 'mvn clean package -Dmaven.test.skip=true -Pgenerate-jar' 
+                sh 'mvn clean package' 
             }
         }
         
@@ -33,6 +27,7 @@ pipeline {
     post {
 	    always {
 	      junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
+	      publishCoverage adapters: [jacocoAdapter('target/site/jacoco/jacoco.xml')]
           emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
 	    }
 	}
