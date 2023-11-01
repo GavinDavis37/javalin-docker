@@ -1,4 +1,0 @@
-Nov 01, 2023 2:50:58 PM io.jenkins.update_center.GitHubSource initializeOrganizationData
-INFO: Retrieving GitHub repo data...
-Nov 01, 2023 2:50:58 PM io.jenkins.update_center.GitHubSource initializeOrganizationData
-INFO: Retrieved GitHub repo data

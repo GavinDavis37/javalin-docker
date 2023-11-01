@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<BugCollection version='4.7.3' threshold='low' effort=''><Error></Error><Project><SrcDir>/home/test/update-center2/src/main/java</SrcDir><SrcDir>/home/test/update-center2/target/generated-sources/annotations</SrcDir><SrcDir>/home/test/update-center2/src/test/java</SrcDir><SrcDir>/home/test/update-center2/target/generated-test-sources/test-annotations</SrcDir></Project></BugCollection>
